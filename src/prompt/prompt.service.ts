@@ -1,9 +1,11 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, Logger } from '@nestjs/common';
 import { ShopDTO } from './dto/shop.dto';
 import { Message } from '@prisma/client';
 
 @Injectable()
 export class PromptService {
+  private readonly logger = new Logger(PromptService.name);
+
   generatePrompt(shopData: ShopDTO): string {
     const systemPrompt = `You are the AI chatbot for ${shopData.name}, 
         an e-commerce store located in ${shopData.city}, ${shopData.province}, ${shopData.country}.
@@ -12,14 +14,18 @@ export class PromptService {
         You should provide accurate and prompt responses,
         maintaining a friendly and professional tone at all times.
         Let's start helping customers! The conversation starts with:\n`;
+
+    this.logger.log('Generate systemPrompt', systemPrompt);
+
     return systemPrompt;
   }
 
   collectMessages(messages: Message[]): string {
-    let prompt = '';
+    let chat = '';
     messages.map((message) => {
-      prompt += `${message.content}\n`;
+      chat += `${message.content}\n`;
     });
-    return prompt;
+    this.logger.log('Collect messages', chat);
+    return chat;
   }
 }

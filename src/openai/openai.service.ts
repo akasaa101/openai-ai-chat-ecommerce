@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, Logger } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { Configuration, OpenAIApi } from 'openai';
 import { GenerateConversationDTO } from './dto/generate_conversation.dto';
@@ -11,6 +11,7 @@ import { MessageService } from 'src/message/message.service';
 @Injectable()
 export class OpenaiService {
   private openai: OpenAIApi;
+  private readonly logger = new Logger(OpenaiService.name);
 
   constructor(
     private configService: ConfigService,
@@ -24,6 +25,7 @@ export class OpenaiService {
     this.openai = new OpenAIApi(configuration);
   }
   async createChatCompletion(message: GenerateConversationDTO): Promise<any> {
+    this.logger.log('Triggered createChatCompletion');
     const systemPrompt = this.promptService.generatePrompt(mockShopData);
 
     const prompt = `${systemPrompt} 
@@ -35,7 +37,6 @@ export class OpenaiService {
       model: 'gpt-3.5-turbo',
       messages: [{ role: 'user', content: prompt }],
     });
-
     const conversation = await this.prisma.conversation.create({
       data: {
         open_id: response.data.id,
@@ -74,6 +75,7 @@ export class OpenaiService {
   }
 
   async replyMessage(reply: ReplyDTO): Promise<any> {
+    this.logger.log('Triggered replyMessage');
     const { conversationId, content, userId } = reply;
 
     await this.messageService.addMessage(conversationId, userId, content);
