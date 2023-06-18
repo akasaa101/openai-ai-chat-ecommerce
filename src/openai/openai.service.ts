@@ -37,6 +37,9 @@ export class OpenaiService {
       model: 'gpt-3.5-turbo',
       messages: [{ role: 'user', content: prompt }],
     });
+
+    console.log('RESPONSE => ', JSON.stringify(response.data));
+
     const conversation = await this.prisma.conversation.create({
       data: {
         open_id: response.data.id,

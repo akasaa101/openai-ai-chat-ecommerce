@@ -30,3 +30,12 @@ model User {
   username String    @unique
   messages Message[]
 }
+
+model Usage {
+  complation_id     Int      @id
+  createdAt         DateTime @default(now())
+  model             String
+  prompt_tokens     Int
+  completion_tokens Int
+  total_tokens      Int
+}
