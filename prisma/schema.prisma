@@ -32,7 +32,7 @@ model User {
 }
 
 model Usage {
-  complation_id     Int      @id
+  complation_id     String   @id
   createdAt         DateTime @default(now())
   model             String
   prompt_tokens     Int

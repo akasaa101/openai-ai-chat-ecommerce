@@ -38,7 +38,15 @@ export class OpenaiService {
       messages: [{ role: 'user', content: prompt }],
     });
 
-    console.log('RESPONSE => ', JSON.stringify(response.data));
+    await this.prisma.usage.create({
+      data: {
+        complation_id: response.data.id,
+        model: response.data.model,
+        prompt_tokens: response.data.usage.prompt_tokens,
+        completion_tokens: response.data.usage.completion_tokens,
+        total_tokens: response.data.usage.total_tokens,
+      },
+    });
 
     const conversation = await this.prisma.conversation.create({
       data: {
@@ -92,6 +100,16 @@ export class OpenaiService {
     const response = await this.openai.createChatCompletion({
       model: 'gpt-3.5-turbo',
       messages: [{ role: 'user', content: `Human: ${prompt}` }],
+    });
+
+    await this.prisma.usage.create({
+      data: {
+        complation_id: response.data.id,
+        model: response.data.model,
+        prompt_tokens: response.data.usage.prompt_tokens,
+        completion_tokens: response.data.usage.completion_tokens,
+        total_tokens: response.data.usage.total_tokens,
+      },
     });
 
     await this.messageService.addMessage(
