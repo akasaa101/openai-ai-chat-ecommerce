@@ -1,5 +1,6 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { PrismaService } from 'prisma/prisma.service';
+import { Message } from '@prisma/client';
 
 @Injectable()
 export class MessageService {
@@ -18,5 +19,14 @@ export class MessageService {
     this.logger.log('Message added.', data);
 
     return data;
+  }
+
+  collectMessages(messages: Message[]): string {
+    let chat = '';
+    messages.map((message) => {
+      chat += `${message.content}\n`;
+    });
+    this.logger.log('Collect messages', chat);
+    return chat;
   }
 }

@@ -26,7 +26,7 @@ export class OpenaiService {
   }
   async createChatCompletion(message: GenerateConversationDTO): Promise<any> {
     this.logger.log('Triggered createChatCompletion');
-    const systemPrompt = this.promptService.generatePrompt(mockShopData);
+    const systemPrompt = this.promptService.generateSystemPrompt(mockShopData);
 
     const prompt = `${systemPrompt} 
         Human: Hello Who Are You?\n        
@@ -82,7 +82,7 @@ export class OpenaiService {
 
     const conversation = await this.getConversation(conversationId);
 
-    const prompt = `${this.promptService.collectMessages(
+    const prompt = `${this.messageService.collectMessages(
       conversation.messages,
     )}`;
 
