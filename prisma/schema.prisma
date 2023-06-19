@@ -39,3 +39,19 @@ model Usage {
   completion_tokens Int
   total_tokens      Int
 }
+
+model Prompt {
+  id        Int      @id @default(autoincrement())
+  role_id   Int
+  Role      Role     @relation(fields: [role_id], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  title     String
+  content   String
+}
+
+model Role {
+  id     Int      @id @default(autoincrement())
+  name   String
+  Prompt Prompt[]
+}

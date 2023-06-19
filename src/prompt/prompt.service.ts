@@ -1,9 +1,29 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { ShopDTO } from './dto/shop.dto';
+import { Prompt } from '@prisma/client';
+import { PrismaService } from 'prisma/prisma.service';
+import { CreatePromptDto } from './dto/createPrompt.dto';
 
 @Injectable()
 export class PromptService {
   private readonly logger = new Logger(PromptService.name);
+  constructor(private prisma: PrismaService) {}
+
+  async create(prompt: CreatePromptDto) {
+    const result = await this.prisma.prompt.create({
+      data: {
+        ...prompt,
+      },
+    });
+    return result;
+  }
+
+  async findAll(): Promise<Prompt[]> {
+    return await this.prisma.prompt.findMany({
+      skip: 0,
+      take: 10,
+    });
+  }
 
   generateSystemPrompt(shopData: ShopDTO): string {
     const systemPrompt = `You are the AI chatbot for ${shopData.name}, 
