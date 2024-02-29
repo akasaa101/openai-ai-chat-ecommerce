@@ -3,19 +3,19 @@
 ## Tech Stack
 akasaa101/openai-ai-chat-ecommerce is built on the following main stack:
 
-- [Jest](http://facebook.github.io/jest/) – Javascript Testing Framework
-- [Node.js](http://nodejs.org/) – Frameworks (Full Stack)
-- [ExpressJS](http://expressjs.com/) – Microframeworks (Backend)
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
-- [TypeScript](http://www.typescriptlang.org) – Languages
-- [RxJS](http://reactivex.io/rxjs/) – Concurrency Frameworks
 - [SQL](https://en.wikipedia.org/wiki/SQL) – Languages
+- [TypeScript](http://www.typescriptlang.org) – Languages
+- [ExpressJS](http://expressjs.com/) – Microframeworks (Backend)
+- [NestJS](nestjs.com) – Frameworks (Full Stack)
+- [Node.js](http://nodejs.org/) – Frameworks (Full Stack)
+- [RxJS](http://reactivex.io/rxjs/) – Concurrency Frameworks
+- [Prisma](https://www.prisma.io/) – Object Relational Mapper (ORM)
 - [ESLint](http://eslint.org/) – Code Review
+- [Jest](http://facebook.github.io/jest/) – Javascript Testing Framework
+- [Prettier](https://prettier.io/) – Code Review
 - [SuperTest](https://www.npmjs.com/package/supertest) – Javascript Testing Framework
 - [Yarn](https://yarnpkg.com/) – Front End Package Manager
-- [Prettier](https://prettier.io/) – Code Review
-- [Prisma](https://www.prisma.io/) – Object Relational Mapper (ORM)
-- [NestJS](nestjs.com) – Frameworks (Full Stack)
 
 Full tech stack [here](/techstack.md)
 
@@ -25,19 +25,19 @@ Full tech stack [here](/techstack.md)
 ## Tech Stack
 akasaa101/openai-ai-chat-ecommerce is built on the following main stack:
 
-- <img width='25' height='25' src='https://img.stackshare.io/service/830/jest.png' alt='Jest'/> [Jest](http://facebook.github.io/jest/) – Javascript Testing Framework
-- <img width='25' height='25' src='https://img.stackshare.io/service/1011/n1JRsFeB_400x400.png' alt='Node.js'/> [Node.js](http://nodejs.org/) – Frameworks (Full Stack)
-- <img width='25' height='25' src='https://img.stackshare.io/service/1163/hashtag.png' alt='ExpressJS'/> [ExpressJS](http://expressjs.com/) – Microframeworks (Backend)
 - <img width='25' height='25' src='https://img.stackshare.io/service/1209/javascript.jpeg' alt='JavaScript'/> [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
-- <img width='25' height='25' src='https://img.stackshare.io/service/1612/bynNY5dJ.jpg' alt='TypeScript'/> [TypeScript](http://www.typescriptlang.org) – Languages
-- <img width='25' height='25' src='https://img.stackshare.io/service/1796/984368.png' alt='RxJS'/> [RxJS](http://reactivex.io/rxjs/) – Concurrency Frameworks
 - <img width='25' height='25' src='https://img.stackshare.io/service/2271/default_068d33483bba6b81ee13fbd4dc7aab9780896a54.png' alt='SQL'/> [SQL](https://en.wikipedia.org/wiki/SQL) – Languages
+- <img width='25' height='25' src='https://img.stackshare.io/service/1612/bynNY5dJ.jpg' alt='TypeScript'/> [TypeScript](http://www.typescriptlang.org) – Languages
+- <img width='25' height='25' src='https://img.stackshare.io/service/1163/hashtag.png' alt='ExpressJS'/> [ExpressJS](http://expressjs.com/) – Microframeworks (Backend)
+- <img width='25' height='25' src='https://img.stackshare.io/service/8747/4zsOyxko_400x400.jpg' alt='NestJS'/> [NestJS](nestjs.com) – Frameworks (Full Stack)
+- <img width='25' height='25' src='https://img.stackshare.io/service/1011/n1JRsFeB_400x400.png' alt='Node.js'/> [Node.js](http://nodejs.org/) – Frameworks (Full Stack)
+- <img width='25' height='25' src='https://img.stackshare.io/service/1796/984368.png' alt='RxJS'/> [RxJS](http://reactivex.io/rxjs/) – Concurrency Frameworks
+- <img width='25' height='25' src='https://img.stackshare.io/service/8680/Logo_Symbol_White.jpg' alt='Prisma'/> [Prisma](https://www.prisma.io/) – Object Relational Mapper (ORM)
 - <img width='25' height='25' src='https://img.stackshare.io/service/3337/Q4L7Jncy.jpg' alt='ESLint'/> [ESLint](http://eslint.org/) – Code Review
+- <img width='25' height='25' src='https://img.stackshare.io/service/830/jest.png' alt='Jest'/> [Jest](http://facebook.github.io/jest/) – Javascript Testing Framework
+- <img width='25' height='25' src='https://img.stackshare.io/service/7035/default_66f265943abed56bcdbfca1c866a4261b1fbb063.jpg' alt='Prettier'/> [Prettier](https://prettier.io/) – Code Review
 - <img width='25' height='25' src='https://img.stackshare.io/no-img-open-source.png' alt='SuperTest'/> [SuperTest](https://www.npmjs.com/package/supertest) – Javascript Testing Framework
 - <img width='25' height='25' src='https://img.stackshare.io/service/5848/44mC-kJ3.jpg' alt='Yarn'/> [Yarn](https://yarnpkg.com/) – Front End Package Manager
-- <img width='25' height='25' src='https://img.stackshare.io/service/7035/default_66f265943abed56bcdbfca1c866a4261b1fbb063.jpg' alt='Prettier'/> [Prettier](https://prettier.io/) – Code Review
-- <img width='25' height='25' src='https://img.stackshare.io/service/8680/Logo_Symbol_White.jpg' alt='Prisma'/> [Prisma](https://www.prisma.io/) – Object Relational Mapper (ORM)
-- <img width='25' height='25' src='https://img.stackshare.io/service/8747/4zsOyxko_400x400.jpg' alt='NestJS'/> [NestJS](nestjs.com) – Frameworks (Full Stack)
 
 Full tech stack [here](/techstack.md)
 
@@ -48,7 +48,7 @@ Full tech stack [here](/techstack.md)
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [akasaa101/openai-ai-chat-ecommerce](https://github.com/akasaa101/openai-ai-chat-ecommerce)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|34<br/>Tools used|01/05/24 <br/>Report generated|
+|34<br/>Tools used|02/29/24 <br/>Report generated|
 |------|------|
 </div>
 
